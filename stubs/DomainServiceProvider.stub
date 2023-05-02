@@ -1,0 +1,21 @@
+<?php
+
+namespace DummyNamespace\Providers;
+
+use Illuminate\Support\ServiceProvider;
+use DummyNamespace\Providers\RouteServiceProvider;
+
+class DummyServiceProvider extends ServiceProvider
+{
+    public function register()
+    {
+        // Bind your repositories and services here
+        // Register RouteServiceProvider
+                $this->app->register(RouteServiceProvider::class);
+    }
+
+    public function boot()
+    {
+        // Load your routes and other bootstrapping tasks here
+    }
+}
